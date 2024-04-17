@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: MIT
+import "@openzeppelin/contracts/access/Ownable.sol";
+
 pragma solidity ^0.8.25;
 
-contract Twitter {
+abstract contract Twitter is Ownable {
 
     uint16 public MAX_TWEET_LENGTH = 280;
 
@@ -14,20 +16,10 @@ contract Twitter {
     }
 
     mapping(address => Tweet[]) public tweets;
-    address public owner;
 
     event TweetCreated(uint256 id, address author, string content, uint256 timestamp);
     event TweetLiked(address liker, address tweetAuthor, uint256 tweetId, uint256 newLikeCount);
     event TweetUnliked(address unliker, address tweetAuthor, uint256 tweetId, uint256 newLikeCount);
-
-    constructor() {
-        owner = msg.sender;
-    }
-
-    modifier onlyOwner() {
-        require(msg.sender == owner, "YOU ARE NOT THE OWNER!");
-        _;
-    }
 
     function changeTweetLength(uint16 newTweetLength) public onlyOwner {
         MAX_TWEET_LENGTH = newTweetLength;
