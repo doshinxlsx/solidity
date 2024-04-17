@@ -26,6 +26,30 @@
 						"type": "address"
 					}
 				],
+				"name": "getAllTweets",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_i",
+						"type": "uint256"
+					}
+				],
 				"name": "getTweet",
 				"outputs": [
 					{
@@ -43,6 +67,11 @@
 						"internalType": "address",
 						"name": "",
 						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"name": "tweets",
@@ -85,11 +114,11 @@
 	},
 	"sources": {
 		"contracts/Twitter.sol": {
-			"keccak256": "0x81b91ed984668a3b7ed9338167e06c3da0a5d57ab7759dc9b0db2a6838a691eb",
+			"keccak256": "0x3ae1fd9541c61fedb0533ed235c9e7cbd1313388b24be46d933c7e31320318b1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ff362926f4ff9b3d4b022f2748bdfaa98f84830497b421f7ff0e13bc85a0ef17",
-				"dweb:/ipfs/Qmbx8TQ9bMLkCymK5J8hNQapVeTNGt52eewbfwqUMNGyFv"
+				"bzz-raw://885b8c3f0db505a47e7fa712dbf03e7c747e57c229b8224f907795bec076174c",
+				"dweb:/ipfs/QmNn8f4e7uwjmqhopiAZzMCdiGRY8ieVcDfxcMkZJ5yXxw"
 			]
 		}
 	},
